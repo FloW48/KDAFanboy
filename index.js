@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const prefix = "kda"
+const songs = ['popstars', 'more', 'baddest']
 
 bot.on('ready', function(){
     bot.user.setActivity("🌟We popstars🌟").catch(console.error);
@@ -29,6 +30,11 @@ bot.on("message", function(message){
     }
     else if(message.content.startsWith(prefix+" stop")){
         message.member.voice.channel.leave();
+    }
+    else if(message.content.startsWith(prefix+" random")){
+        voiceChannel.join().then(connection => {
+            playMusic(songs[Math.floor((Math.random() * songs.length))], connection)
+        }) 
     }
 })
 
