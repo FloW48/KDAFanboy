@@ -1,10 +1,10 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const prefix = "kda"
-const songs = ['popstars', 'more', 'baddest']
+const songs = ['popstars', 'more', 'baddest', 'drum', 'showyou', 'vilain']
 
 bot.on('ready', function(){
-    bot.user.setActivity("🌟We popstars🌟").catch(console.error);
+    bot.user.setActivity("🌟Straight up vilain🌟").catch(console.error);
 })
 
 bot.login('NzczNDk2OTQyMDgwNTU3MDg2.X6KFKQ.uK7C19ilz60667_NEuqUuJ58Zcw')
@@ -26,6 +26,21 @@ bot.on("message", function(message){
     else if(message.content.startsWith(prefix+" baddest")){
         voiceChannel.join().then(connection => {
             playMusic("baddest", connection)
+        }) 
+    }
+    else if(message.content.startsWith(prefix+" drum")){
+        voiceChannel.join().then(connection => {
+            playMusic("drum", connection)
+        }) 
+    }
+    else if(message.content.startsWith(prefix+" vilain")){
+        voiceChannel.join().then(connection => {
+            playMusic("vilain", connection)
+        }) 
+    }
+    else if(message.content.startsWith(prefix+" showyou")){
+        voiceChannel.join().then(connection => {
+            playMusic("showyou", connection)
         }) 
     }
     else if(message.content.startsWith(prefix+" stop")){
