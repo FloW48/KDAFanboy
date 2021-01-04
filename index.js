@@ -22,7 +22,7 @@ bot.on('ready', function(){
     bot.user.setActivity("🌟Gonna shake it in your face🌟").catch(console.error);
 })
 
-bot.login('NzczNDk2OTQyMDgwNTU3MDg2.X6KFKQ.uK7C19ilz60667_NEuqUuJ58Zcw')
+bot.login('token')
     .catch(console.error);
 
 
