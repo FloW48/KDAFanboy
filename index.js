@@ -22,7 +22,7 @@ bot.on('ready', function(){
     bot.user.setActivity("🌟Gonna shake it in your face🌟").catch(console.error);
 })
 
-bot.login('save.token')
+bot.login(save.token)
     .catch(console.error);
 
 
